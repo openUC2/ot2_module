@@ -1,0 +1,21 @@
+name: uc2_module
+services:
+  uc2_module:
+    container_name: uc2_module
+    image: ${IMAGE}
+    build:
+      context: .
+      dockerfile: Dockerfile
+      tags:
+        - ${IMAGE}:latest
+        - ${IMAGE}:${PROJECT_VERSION}
+        - ${IMAGE}:dev
+    command: python uc2_module/src/uc2_rest_node.py --port 2000 --uc2_ip ${UC2_IP}
+    privileged: true
+    env_file: .env
+    volumes:
+      - ./src:/home/app/uc2_module/src
+      - ./tests:/home/app/uc2_module/tests
+    ports:
+      - 2000:2000
+      - 8001:8001
