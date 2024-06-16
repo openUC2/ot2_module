@@ -11,7 +11,9 @@ pip install -e .
 
 Note: This module was developed using Python 3.9
 
+### Build docker
 ```
+docker-compose up --build
 ```
 ### Updating the Code on node computer
 1.  `cd ~/wei_ws/src/uc2_module`

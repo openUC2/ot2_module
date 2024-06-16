@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath("../.."))
 
 # -- Project information -----------------------------------------------------
 
-project = "OT2_Driver"
+project = "UC2_Driver"
 copyright = "2022, AD-SDL"
 author = "AD-SDL"
 now = datetime.datetime.now()

@@ -1,6 +1,6 @@
 FROM ghcr.io/ad-sdl/wei
 
-LABEL org.opencontainers.image.source=https://github.com/openuc2/ot2_module
+LABEL org.opencontainers.image.source=https://github.com/openuc2/uc2_module
 LABEL org.opencontainers.image.description="Drivers and REST API's for the Uc2 microscope"
 LABEL org.opencontainers.image.licenses=MIT
 
@@ -8,7 +8,7 @@ LABEL org.opencontainers.image.licenses=MIT
 # Module specific logic goes below here #
 #########################################
 
-RUN mkdir -p ot2_module
+RUN mkdir -p uc2_module
 
 COPY ./src uc2_module/src
 COPY ./README.md uc2_module/README.md
